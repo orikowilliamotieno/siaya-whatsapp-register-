@@ -118,6 +118,35 @@
   </style>
 </head>
 <body>
+  <style>
+  .marquee {
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 8px 0;
+  }
+  .marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    color: lightblue;
+    font-size: 18px;
+    font-weight: bold;
+    animation: marquee 15s linear infinite;
+  }
+  @keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
+
+<div class="marquee">
+  <span>
+    The Siaya Poly Online Services Help Desk supports HELB, KUCCPS, Student Portal, Online Reporting, Email Updating. 
+    Contact: 0784151456 | Email: willieotieno15@gmail.com
+  </span>
+</div>
 <div class="wrap">
     <div style="text-align: center; margin-bottom: 10px;">
         <img src="logo.png" alt="TSNP Logo" style="max-width: 120px; height: auto;">
@@ -322,36 +351,8 @@ document.addEventListener('keydown', e => {
     For assistance contact the support service on 0784151456.
   </marquee>
 </footer>
-  <style>
-  .marquee {
-    width: 100%;
-    background: white;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #ddd;
-    padding: 8px 0;
-  }
-  .marquee span {
-    display: inline-block;
-    white-space: nowrap;
-    color: lightblue;
-    font-size: 18px;
-    font-weight: bold;
-    animation: marquee 15s linear infinite;
-  }
-  @keyframes marquee {
-    0%   { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-</style>
-
-<div class="marquee">
-  <span>
-    The Siaya Poly Online Services Help Desk supports HELB, KUCCPS, Student Portal, Online Reporting, Email Updating. 
-    Contact: 0784151456 | Email: willieotieno15@gmail.com
-  </span>
-</div>
 </body>
 </html>
+
 
 
