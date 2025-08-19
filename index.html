@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Oriko William Otieno">
+  <title>TSNP Department WhatsApp Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .wrap {
+      max-width: 800px;
+      background: white;
+      margin: 50px auto;
+      padding: 25px 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3c72;
+      margin-bottom: 5px;
+    }
+    .hint {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .notice {
+      background: #fff8e1;
+      border-left: 5px solid #ffc107;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .full {
+      grid-column: 1 / -1;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #1e3c72;
+      box-shadow: 0 0 5px rgba(30,60,114,0.3);
+    }
+    button {
+      background: #1e3c72;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #16305c;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    .dev-credit {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    .success-box {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #4caf50;
+      border-radius: 8px;
+      background: #e8f5e9;
+    }
+    .success-box h3 {
+      margin: 0 0 10px;
+    }
+    .success-box a {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .success-box a:hover {
+      background: #1ebe5d;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+    <div style="text-align: center; margin-bottom: 10px;">
+        <img src="logo.png" alt="TSNP Logo" style="max-width: 120px; height: auto;">
+    </div>
+    <h1>THE SIAYA NATIONAL POLYTECHNIC</h1>
+    <h2>DEPARTMENTS WHATSAPP GROUP</h2>
+    <p class="hint">Register once, then join your department WhatsApp group. Date and time are captured automatically.</p>
+
+  <div class="notice">
+    To prevent misuse, your IP and device agent are recorded with your consent when you submit.
+  </div>
+
+  <form id="registerForm" autocomplete="off" novalidate>
+    <div class="form-grid">
+      <div class="full">
+        <label for="full_name">Full Name</label>
+        <input id="full_name" name="full_name" type="text" required placeholder="Surname Firstname Othername">
+      </div>
+
+      <div>
+        <label for="user_type">Type</label>
+        <select id="user_type" name="user_type" required>
+          <option value="">Select...</option>
+          <option value="Student">Student</option>
+          <option value="Staff">Staff</option>
+        </select>
+      </div>
+
+      <div id="admission_wrap" style="display:none;">
+        <label for="admission_number">Admission Number</label>
+        <input id="admission_number" name="admission_number" type="text" placeholder=" ">
+      </div>
+
+      <div id="staff_wrap" style="display:none;">
+        <label for="staff_number">Staff Number</label>
+        <input id="staff_number" name="staff_number" type="text" placeholder=" ">
+      </div>
+
+      <div>
+        <label for="contact">Contact</label>
+        <input id="contact" name="contact" type="tel" required placeholder=" ">
+      </div>
+
+      <div id="course_wrap">
+        <label for="course">Course</label>
+        <input id="course" name="course" type="text" required placeholder="">
+      </div>
+
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select...</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+          <option value="">Select Department...</option>
+          <option>Computing and Informatics</option>
+          <option>Business Studies</option>
+          <option>Mechanical Engineering</option>
+          <option>Electrical and Electronics</option>
+          <option>Building and Civil Engineering</option>
+          <option>Hospitality and Tourism</option>
+          <option>Applied Sciences</option>
+          <option>Agriculture and Environment</option>
+          <option>Communication and Development Studies</option>
+          <option>Automotive Engineering</option>
+          <option>Fashion Design and Cosmetology</option>
+          <option>Information Studies</option>
+          <option>Health Sciences</option>
+          <option>Liberal Studies</option>
+        </select>
+      </div>
+
+      <div class="full">
+        <label>Date and Time (auto)</label>
+        <input type="text" id="datetime" disabled>
+      </div>
+
+      <!-- WhatsApp Links -->
+      <div class="full" style="margin-top:10px;">
+        <label>Join WhatsApp Groups</label>
+        <ul style="list-style:none; padding-left:0;">
+          <li><a href="https://orikowilliamotieno.github.io/whatsapp-verification-/" target="_blank" style="color:#25d366; font-weight:bold;">SIAYA POLY ONLINES SERVICES HELP DESK</a></li>
+          <li><a href="https://orikowilliamotieno.github.io/siaya-whatsapp-register/" target="_blank" style="color:#25d366; font-weight:bold;">THE SIAYA NATIONAL POLYTECHNIC OFFICIAL PAGE</a></li>
+          <li><a href="https://orikowilliamotieno.github.io/Oriko-William-Otieno-ICT-Services/index.html" target="_blank" style="color:#25d366; font-weight:bold;">FOR MORE ABOUT DEVELOPER WEBSITE</a></li>
+        </ul>
+      </div>
+
+      <div class="full">
+        <button type="submit">Submit & Save Registration</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="successBox" class="success-box" style="display:none;">
+    <h3>Registration Successful!</h3>
+    <p>Click below to join your Department WhatsApp Group:</p>
+    <a id="waLink" href="#" target="_blank">Join WhatsApp Group</a>
+  </div>
+
+  <div class="footer">
+    <span>© <span id="year"></span> The Siaya National Polytechnic</span> |
+    <span class="small">Server time: <span id="servertime"></span> EAT</span>
+    <span class="dev-credit">Designed and Developed By Oriko William Otieno</span>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Populate year and date
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function updateTime() {
+    const options = { timeZone: "Africa/Nairobi", hour12: false };
+    const now = new Date().toLocaleString("sv-SE", options);
+    document.getElementById('datetime').value = now + " Africa/Nairobi";
+    document.getElementById('servertime').textContent = now;
+  }
+  updateTime();
+  setInterval(updateTime, 1000);
+
+  // Toggle Student/Staff fields
+  const userType = document.getElementById('user_type');
+  const admissionWrap = document.getElementById('admission_wrap');
+  const staffWrap = document.getElementById('staff_wrap');
+  const courseWrap = document.getElementById('course_wrap');
+  const courseInput = document.getElementById('course');
+
+  function toggleFields() {
+    if (userType.value === 'Student') {
+      admissionWrap.style.display = 'block';
+      staffWrap.style.display = 'none';
+      courseWrap.style.display = 'block';
+      courseInput.required = true;
+    } else if (userType.value === 'Staff') {
+      admissionWrap.style.display = 'none';
+      staffWrap.style.display = 'block';
+      courseWrap.style.display = 'none';
+      courseInput.required = false;
+      courseInput.value = '';
+    } else {
+      admissionWrap.style.display = 'none';
+      staffWrap.style.display = 'none';
+      courseWrap.style.display = 'block';
+      courseInput.required = true;
+    }
+  }
+  userType.addEventListener('change', toggleFields);
+  toggleFields();
+
+  // Map departments to WhatsApp links
+  const waMap = {
+    "Computing and Informatics": "https://chat.whatsapp.com/Ly2IGqYb8BrK14VWHO6rnY",
+    "Business Studies": "https://chat.whatsapp.com/EyM82VzDugmL99GhDCilgQ",
+    "Mechanical Engineering": "https://chat.whatsapp.com/LQfvM7XnWc3AcUvKUoGdHR",
+    "Electrical and Electronics": "https://chat.whatsapp.com/B8clepHUSTd85CdmlYAYcW",
+    "Building and Civil Engineering": "https://chat.whatsapp.com/JgsW4f49kLuAn5G5RDDZE8",
+    "Hospitality and Tourism": "https://chat.whatsapp.com/GGv23bFmu429EvbzDBeoSn",
+    "Applied Sciences": "https://chat.whatsapp.com/K3bltgk4xtrG0AQqHd9M7Y",
+    "Agriculture and Environment": "https://chat.whatsapp.com/COQof3eaj8NJt8IlDqfFVQ",
+    "Communication and Development Studies": "https://chat.whatsapp.com/REPLACE_CDS",
+    "Automotive Engineering": "https://chat.whatsapp.com/REPLACE_AE2",
+    "Fashion Design and Cosmetology": "https://chat.whatsapp.com/GQEjImJqRXK9jpdVQS9gPU",
+    "Information Studies": "https://chat.whatsapp.com/REPLACE_IS",
+    "Health Sciences": "https://chat.whatsapp.com/DYt2eqTl7Q2BSg21QZ65Tx",
+    "Liberal Studies": "https://chat.whatsapp.com/LHJ9h3xEYQDLVoFGnfimpt"
+  };
+
+  // Handle form submit
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const dept = document.getElementById('department').value;
+    if (waMap[dept]) {
+      document.getElementById('waLink').href = waMap[dept];
+      document.getElementById('successBox').style.display = 'block';
+      this.style.display = 'none';
+    } else {
+      alert("Invalid department selected.");
+    }
+  });
+});
+
+// Disable right-click and inspect
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.key === "F12" || 
+     (e.ctrlKey && e.shiftKey && ["I","i","J","j","C","c"].includes(e.key)) || 
+     (e.ctrlKey && e.key.toLowerCase() === "u")) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<footer style="background-color: white; color: blue; font-weight: bold; padding: 10px 0;">
+  <marquee behavior="scroll" direction="left">
+    Only bonafide trainees of The Siaya National Polytechnic are allowed to join the WhatsApp group. 
+    For assistance contact the support service on 0784151456.
+  </marquee>
+</footer>
+</body>
+</html>
